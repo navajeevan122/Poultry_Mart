@@ -4,6 +4,12 @@ import { Feather, ShieldCheck } from 'lucide-react';
 
 const breedsData = [
   {
+    name: 'Gamefowl Aseel',
+    origin: 'India & International Lineage',
+    desc: 'High stamina international Gamefowl breed. Known for exceptional muscular vigor, heavy bone density, fierce standing posture, and breeding value.',
+    image: '/uploads/gamefowl_aseel.png',
+  },
+  {
     name: 'Peruvian',
     origin: 'Peru & International Lineage',
     desc: 'Heavyweight pure Peruvian Aseel breed. Extremely aggressive, high stamina, massive bone structure, and high breeding value.',
@@ -13,12 +19,6 @@ const breedsData = [
     name: 'Peru Cross',
     origin: 'Andhra Pradesh & Tamil Nadu',
     desc: 'Heavyweight Peruvidai cross hybrid breed with thick muscular leg bone structure, high growth rate, and heavy breeding stock demand.',
-    image: '/uploads/kathi_sandai_aseel.jpg',
-  },
-  {
-    name: 'Gamefowl Aseel',
-    origin: 'India & International Lineage',
-    desc: 'High stamina international Gamefowl breed. Known for exceptional muscular vigor, heavy bone density, fierce standing posture, and breeding value.',
     image: '/uploads/kathi_sandai_aseel.jpg',
   },
   {
@@ -38,12 +38,6 @@ const breedsData = [
     origin: 'South India',
     desc: 'Authentic free-range organic country chicken raised naturally in open farm fields. High demand for rich taste and high egg yield.',
     image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800',
-  },
-  {
-    name: 'Peruvidai Naatu Kollu',
-    origin: 'Tamil Nadu & Andhra Pradesh',
-    desc: 'Heavy breed native country rooster with long heavy legs, red comb, and massive body size ideal for farm stock breeding.',
-    image: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
   },
   {
     name: 'Kadaknath Naatu Kollu',

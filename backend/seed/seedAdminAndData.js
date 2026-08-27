@@ -14,7 +14,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Lakshmi Naatu Kollu Farm',
-    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram, and Peruvidai country breeds raised naturally in farm fields.',
+    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, and Bhimavaram country breeds raised naturally in farm fields.',
     village: 'Tadepalligudem',
     mandal: 'Tadepalligudem',
     district: 'West Godavari',
@@ -30,7 +30,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Venkateswara Native Naatu Kollu Farm',
-    farmDescription: 'Authentic Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
+    farmDescription: 'Authentic Gamefowl Aseel, Peruvian, Peru Cross, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
     village: 'Bhimavaram',
     mandal: 'Bhimavaram',
     district: 'West Godavari',
@@ -42,6 +42,38 @@ const sampleSellers = [
 ];
 
 const samplePoultryListings = (seller1Id, seller2Id) => [
+  {
+    sellerId: seller2Id,
+    name: 'Pure Gamefowl Aseel Fighter Cock',
+    gender: 'Cock',
+    breed: 'Gamefowl Aseel',
+    age: 18,
+    ageUnit: 'Months',
+    weight: 4.1,
+    weightUnit: 'KG',
+    price: 10500,
+    quantity: 2,
+    village: 'Bhimavaram',
+    mandal: 'Bhimavaram',
+    district: 'West Godavari',
+    state: 'Andhra Pradesh',
+    pincode: '534201',
+    location: 'Bhimavaram, West Godavari, Andhra Pradesh',
+    healthStatus: 'Healthy',
+    vaccinationStatus: 'Vaccinated',
+    vaccinationDetails: 'Fully vaccinated & dewormed. High game lineage with supreme muscle stamina.',
+    description: 'Elite Gamefowl Aseel Cock with powerful leg bone density, golden hackles, broad chest, fierce aggression, and top breeding genetics.',
+    media: {
+      images: [
+        '/uploads/gamefowl_aseel.png',
+        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
+      ],
+      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
+    },
+    approvalStatus: 'approved',
+    isAvailable: true,
+    views: 940,
+  },
   {
     sellerId: seller2Id,
     name: 'Pure Peruvian Aseel Breeder Cock',
@@ -105,38 +137,6 @@ const samplePoultryListings = (seller1Id, seller2Id) => [
     approvalStatus: 'approved',
     isAvailable: true,
     views: 780,
-  },
-  {
-    sellerId: seller2Id,
-    name: 'Pure Gamefowl Aseel Fighter Cock',
-    gender: 'Cock',
-    breed: 'Gamefowl Aseel',
-    age: 18,
-    ageUnit: 'Months',
-    weight: 4.1,
-    weightUnit: 'KG',
-    price: 10500,
-    quantity: 2,
-    village: 'Bhimavaram',
-    mandal: 'Bhimavaram',
-    district: 'West Godavari',
-    state: 'Andhra Pradesh',
-    pincode: '534201',
-    location: 'Bhimavaram, West Godavari, Andhra Pradesh',
-    healthStatus: 'Healthy',
-    vaccinationStatus: 'Vaccinated',
-    vaccinationDetails: 'Fully vaccinated & dewormed. High game lineage with supreme muscle stamina.',
-    description: 'Elite Gamefowl Aseel Cock with powerful leg bone density, broad chest, fierce aggression, and top breeding genetics.',
-    media: {
-      images: [
-        '/uploads/kathi_sandai_aseel.jpg',
-        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
-      ],
-      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
-    },
-    approvalStatus: 'approved',
-    isAvailable: true,
-    views: 940,
   },
   {
     sellerId: seller2Id,
@@ -233,38 +233,6 @@ const samplePoultryListings = (seller1Id, seller2Id) => [
     approvalStatus: 'approved',
     isAvailable: true,
     views: 420,
-  },
-  {
-    sellerId: seller1Id,
-    name: 'Peruvidai Naatu Kollu Breeder Cock',
-    gender: 'Cock',
-    breed: 'Peruvidai Naatu Kollu',
-    age: 12,
-    ageUnit: 'Months',
-    weight: 3.4,
-    weightUnit: 'KG',
-    price: 4500,
-    quantity: 6,
-    village: 'Tadepalligudem',
-    mandal: 'Tadepalligudem',
-    district: 'West Godavari',
-    state: 'Andhra Pradesh',
-    pincode: '534101',
-    location: 'Tadepalligudem, West Godavari, Andhra Pradesh',
-    healthStatus: 'Healthy',
-    vaccinationStatus: 'Vaccinated',
-    vaccinationDetails: 'Dewormed regularly. Excellent health and high breeding vigor.',
-    description: 'Heavy size Peruvidai Naatu Kollu Rooster with massive leg strength, bright red comb, and heavy muscular body structure.',
-    media: {
-      images: [
-        '/uploads/kathi_sandai_aseel.jpg',
-        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
-      ],
-      videos: [],
-    },
-    approvalStatus: 'approved',
-    isAvailable: true,
-    views: 180,
   },
   {
     sellerId: seller1Id,
@@ -385,10 +353,10 @@ const seedData = async () => {
     if (sellerIds.length >= 2) {
       const demoListings = samplePoultryListings(sellerIds[0], sellerIds[1]);
       await Poultry.insertMany(demoListings);
-      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Peruvian into MongoDB Atlas!`);
+      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings into MongoDB Atlas!`);
     }
 
-    console.log('\n[MongoDB Atlas Seed Completed Successfully] Peruvian, Peru Cross, Gamefowl & Naatu Kollu Marketplace ready!');
+    console.log('\n[MongoDB Atlas Seed Completed Successfully] Gamefowl, Peruvian & Naatu Kollu Marketplace ready!');
     process.exit(0);
   } catch (error) {
     console.error(`====================================================`);

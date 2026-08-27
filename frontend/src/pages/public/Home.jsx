@@ -11,9 +11,9 @@ const popularBreedsList = [
   { name: 'Peru Cross', desc: 'Heavy Peruvidai Hybrid Breed', icon: '⚡', badge: 'Peru Cross' },
   { name: 'Gamefowl Aseel', desc: 'High Game Breed & Muscular Stamina', icon: '👑', badge: 'Gamefowl Line' },
   { name: 'Bhimavaram Aseel', desc: 'Famous West Godavari Breeder & Fighter', icon: '🔥', badge: 'Bhimavaram Spec' },
-  { name: 'Peruvidai Naatu Kollu', desc: 'Heavy Breed Country Rooster', icon: '🐓', badge: 'Heavy Size' },
   { name: 'Kili Mookku Aseel', desc: 'Parrot Beak Native Rooster', icon: '🦜', badge: 'Champion Line' },
   { name: 'Kathi Sandai Aseel', desc: 'High Stamina Fighter Rooster', icon: '⚔️', badge: 'Stamina Fighter' },
+  { name: 'Kadaknath Naatu Kollu', desc: 'Medicinal Black Meat Native Bird', icon: '🖤', badge: 'Black Meat' },
 ];
 
 const Home = () => {
@@ -66,7 +66,7 @@ const Home = () => {
               </h1>
 
               <p className="text-lg text-emerald-100/90 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Find organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram, Peruvidai, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
+                Find organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
               </p>
 
               {/* Integrated Hero Search Bar */}
