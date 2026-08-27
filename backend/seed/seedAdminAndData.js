@@ -14,7 +14,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Lakshmi Naatu Kollu Farm',
-    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peruvidai, and Siruvidai country breeds raised naturally in farm fields.',
+    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Bhimavaram Aseel, Peruvidai, and Siruvidai country breeds raised naturally in farm fields.',
     village: 'Tadepalligudem',
     mandal: 'Tadepalligudem',
     district: 'West Godavari',
@@ -30,18 +30,50 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Venkateswara Native Naatu Kollu Farm',
-    farmDescription: 'Authentic Kili Mookku Aseel Naatu Kollu fighters, Kathi Sandai roosters, and pure Country hens fed with natural grains.',
-    village: 'Anakapalle',
-    mandal: 'Anakapalle',
-    district: 'Visakhapatnam',
+    farmDescription: 'Authentic Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
+    village: 'Bhimavaram',
+    mandal: 'Bhimavaram',
+    district: 'West Godavari',
     state: 'Andhra Pradesh',
-    pincode: '531001',
+    pincode: '534201',
     whatsappEnabled: true,
     isActive: true,
   },
 ];
 
 const samplePoultryListings = (seller1Id, seller2Id) => [
+  {
+    sellerId: seller2Id,
+    name: 'Pure Bhimavaram Aseel Fighter Cock',
+    gender: 'Cock',
+    breed: 'Bhimavaram Aseel',
+    age: 16,
+    ageUnit: 'Months',
+    weight: 3.9,
+    weightUnit: 'KG',
+    price: 9500,
+    quantity: 3,
+    village: 'Bhimavaram',
+    mandal: 'Bhimavaram',
+    district: 'West Godavari',
+    state: 'Andhra Pradesh',
+    pincode: '534201',
+    location: 'Bhimavaram, West Godavari, Andhra Pradesh',
+    healthStatus: 'Healthy',
+    vaccinationStatus: 'Vaccinated',
+    vaccinationDetails: 'Dewormed & fully vaccinated. World famous Bhimavaram champion fighter bloodline.',
+    description: 'Original West Godavari Bhimavaram Aseel Cock with tall standing posture, massive muscular leg strength, and high breeding stamina.',
+    media: {
+      images: [
+        '/uploads/kathi_sandai_aseel.jpg',
+        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
+      ],
+      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
+    },
+    approvalStatus: 'approved',
+    isAvailable: true,
+    views: 820,
+  },
   {
     sellerId: seller2Id,
     name: 'Kathi Sandai Naatu Kollu Fighter Cock',
@@ -68,7 +100,7 @@ const samplePoultryListings = (seller1Id, seller2Id) => [
         '/uploads/kathi_sandai_aseel.jpg',
         'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
       ],
-      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
+      videos: [],
     },
     approvalStatus: 'approved',
     isAvailable: true,
@@ -237,10 +269,19 @@ const samplePoultryListings = (seller1Id, seller2Id) => [
 ];
 
 const seedData = async () => {
+  const uri = process.env.MONGODB_URI;
+
+  if (!uri || uri.includes('<db_password>')) {
+    console.error(`====================================================`);
+    console.error(`❌ [MongoDB Atlas Password Required]`);
+    console.error(`Please update 'backend/.env' with your real MongoDB Atlas password.`);
+    console.error(`====================================================`);
+    process.exit(1);
+  }
+
   try {
-    const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/poultrymart';
-    await mongoose.connect(mongoUri);
-    console.log('[Seed] Connected to MongoDB Atlas / Local DB');
+    const conn = await mongoose.connect(uri);
+    console.log(`☁️ [MongoDB Atlas Seed] Connected to cluster: ${conn.connection.host} / ${conn.connection.name}`);
 
     // 1. Create/Update Admin Account (jeevan@poultrymart.com / Jeevan1234)
     const adminEmail = 'jeevan@poultrymart.com';
@@ -275,18 +316,20 @@ const seedData = async () => {
       sellerIds.push(seller._id);
     }
 
-    // Clear and re-seed poultry listings removing phone photo!
+    // Clear and re-seed poultry listings
     await Poultry.deleteMany({});
     if (sellerIds.length >= 2) {
       const demoListings = samplePoultryListings(sellerIds[0], sellerIds[1]);
       await Poultry.insertMany(demoListings);
-      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings (Phone photo removed)!`);
+      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Bhimavaram Aseel into MongoDB Atlas!`);
     }
 
-    console.log('\n[Seed Completed Successfully] Clean Naatu Kollu listings ready!');
+    console.log('\n[MongoDB Atlas Seed Completed Successfully] Bhimavaram & Naatu Kollu Marketplace ready!');
     process.exit(0);
   } catch (error) {
-    console.error('[Seed Error]', error);
+    console.error(`====================================================`);
+    console.error(`❌ [MongoDB Atlas Seed Failed]: ${error.message}`);
+    console.error(`====================================================`);
     process.exit(1);
   }
 };
