@@ -14,7 +14,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Lakshmi Naatu Kollu Farm',
-    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peru Cross, Gamefowl Aseel, Bhimavaram, Peruvidai, and Siruvidai country breeds raised naturally in farm fields.',
+    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram, and Peruvidai country breeds raised naturally in farm fields.',
     village: 'Tadepalligudem',
     mandal: 'Tadepalligudem',
     district: 'West Godavari',
@@ -30,7 +30,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Venkateswara Native Naatu Kollu Farm',
-    farmDescription: 'Authentic Peru Cross, Gamefowl Aseel, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
+    farmDescription: 'Authentic Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
     village: 'Bhimavaram',
     mandal: 'Bhimavaram',
     district: 'West Godavari',
@@ -42,6 +42,38 @@ const sampleSellers = [
 ];
 
 const samplePoultryListings = (seller1Id, seller2Id) => [
+  {
+    sellerId: seller2Id,
+    name: 'Pure Peruvian Aseel Breeder Cock',
+    gender: 'Cock',
+    breed: 'Peruvian',
+    age: 20,
+    ageUnit: 'Months',
+    weight: 4.5,
+    weightUnit: 'KG',
+    price: 12500,
+    quantity: 2,
+    village: 'Bhimavaram',
+    mandal: 'Bhimavaram',
+    district: 'West Godavari',
+    state: 'Andhra Pradesh',
+    pincode: '534201',
+    location: 'Bhimavaram, West Godavari, Andhra Pradesh',
+    healthStatus: 'Healthy',
+    vaccinationStatus: 'Vaccinated',
+    vaccinationDetails: 'Fully vaccinated & dewormed. Massive Peruvian heavy bone genetics.',
+    description: 'Heavyweight Pure Peruvian Cock with immense leg bone strength, broad chest, upright posture, and top breeder bloodline.',
+    media: {
+      images: [
+        '/uploads/kathi_sandai_aseel.jpg',
+        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
+      ],
+      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
+    },
+    approvalStatus: 'approved',
+    isAvailable: true,
+    views: 1100,
+  },
   {
     sellerId: seller1Id,
     name: 'Heavy Peru Cross Breeder Cock',
@@ -267,38 +299,6 @@ const samplePoultryListings = (seller1Id, seller2Id) => [
     views: 245,
   },
   {
-    sellerId: seller2Id,
-    name: 'Siruvidai Native Naatu Kollu Hen',
-    gender: 'Hen',
-    breed: 'Siruvidai Naatu Kollu',
-    age: 7,
-    ageUnit: 'Months',
-    weight: 1.2,
-    weightUnit: 'KG',
-    price: 1100,
-    quantity: 20,
-    village: 'Anakapalle',
-    mandal: 'Anakapalle',
-    district: 'Visakhapatnam',
-    state: 'Andhra Pradesh',
-    pincode: '531001',
-    location: 'Anakapalle, Visakhapatnam, Andhra Pradesh',
-    healthStatus: 'Healthy',
-    vaccinationStatus: 'Vaccinated',
-    vaccinationDetails: 'Dewormed on natural herbal diet.',
-    description: 'Traditional Siruvidai Naatu Kollu Hen. Highly active, agile, natural brooding hen for hatching country eggs.',
-    media: {
-      images: [
-        'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800',
-        'https://images.unsplash.com/photo-1563281577-a7be47e20db9?w=800',
-      ],
-      videos: [],
-    },
-    approvalStatus: 'approved',
-    isAvailable: true,
-    views: 195,
-  },
-  {
     sellerId: seller1Id,
     name: 'Black Naatu Kollu Hen (Kadaknath Native)',
     gender: 'Hen',
@@ -385,10 +385,10 @@ const seedData = async () => {
     if (sellerIds.length >= 2) {
       const demoListings = samplePoultryListings(sellerIds[0], sellerIds[1]);
       await Poultry.insertMany(demoListings);
-      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Peru Cross into MongoDB Atlas!`);
+      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Peruvian into MongoDB Atlas!`);
     }
 
-    console.log('\n[MongoDB Atlas Seed Completed Successfully] Peru Cross, Gamefowl & Naatu Kollu Marketplace ready!');
+    console.log('\n[MongoDB Atlas Seed Completed Successfully] Peruvian, Peru Cross, Gamefowl & Naatu Kollu Marketplace ready!');
     process.exit(0);
   } catch (error) {
     console.error(`====================================================`);

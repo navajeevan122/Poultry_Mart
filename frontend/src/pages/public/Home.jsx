@@ -7,12 +7,12 @@ import { Search, Phone, ShieldCheck, CheckCircle, ArrowRight, UserPlus, Sparkles
 
 const popularBreedsList = [
   { name: 'Pure Naatu Kollu', desc: 'Organic Country Hen / Natu Kodi', icon: '🌾', badge: '100% Organic' },
+  { name: 'Peruvian', desc: 'Heavyweight Peruvian Aseel Breed', icon: '🦚', badge: 'Peruvian Spec' },
   { name: 'Peru Cross', desc: 'Heavy Peruvidai Hybrid Breed', icon: '⚡', badge: 'Peru Cross' },
   { name: 'Gamefowl Aseel', desc: 'High Game Breed & Muscular Stamina', icon: '👑', badge: 'Gamefowl Line' },
   { name: 'Bhimavaram Aseel', desc: 'Famous West Godavari Breeder & Fighter', icon: '🔥', badge: 'Bhimavaram Spec' },
   { name: 'Peruvidai Naatu Kollu', desc: 'Heavy Breed Country Rooster', icon: '🐓', badge: 'Heavy Size' },
   { name: 'Kili Mookku Aseel', desc: 'Parrot Beak Native Rooster', icon: '🦜', badge: 'Champion Line' },
-  { name: 'Siruvidai Naatu Kollu', desc: 'Small Breed Native Brooding Hen', icon: '🥚', badge: 'Brooding Spec' },
   { name: 'Kathi Sandai Aseel', desc: 'High Stamina Fighter Rooster', icon: '⚔️', badge: 'Stamina Fighter' },
 ];
 
@@ -66,7 +66,7 @@ const Home = () => {
               </h1>
 
               <p className="text-lg text-emerald-100/90 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Find organic free-range Naatu Kollu (Natu Kodi), Peru Cross, Gamefowl Aseel, Bhimavaram, Peruvidai, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
+                Find organic free-range Naatu Kollu (Natu Kodi), Peruvian, Peru Cross, Gamefowl Aseel, Bhimavaram, Peruvidai, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
               </p>
 
               {/* Integrated Hero Search Bar */}
@@ -77,7 +77,7 @@ const Home = () => {
                     type="text"
                     value={heroSearch}
                     onChange={(e) => setHeroSearch(e.target.value)}
-                    placeholder="Search Peru Cross, Gamefowl, Bhimavaram, Naatu Kollu..."
+                    placeholder="Search Peruvian, Peru Cross, Gamefowl, Bhimavaram..."
                     className="w-full pl-12 pr-36 py-3 bg-transparent text-slate-900 placeholder-slate-400 text-sm font-semibold focus:outline-none"
                   />
                   <button
@@ -136,10 +136,10 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent flex items-end p-6">
                     <div className="text-white space-y-1">
                       <span className="bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        Peru Cross & Native Breeds
+                        Peruvian & Native Breeds
                       </span>
                       <h3 className="text-xl font-black">Organic Free Range Naatu Kollu</h3>
-                      <p className="text-xs text-emerald-200">Peru Cross, Gamefowl, Bhimavaram & Visakhapatnam</p>
+                      <p className="text-xs text-emerald-200">Peruvian, Peru Cross, Gamefowl & Bhimavaram</p>
                     </div>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ const Home = () => {
               Featured <span className="text-emerald-600">Naatu Kollu Listings</span>
             </h2>
             <p className="text-sm text-slate-500 mt-1">
-              Recently approved Peru Cross roosters, Gamefowl Aseel, Bhimavaram roosters, and organic country hens.
+              Recently approved Peruvian roosters, Peru Cross, Gamefowl Aseel, and organic country hens.
             </p>
           </div>
           <Link

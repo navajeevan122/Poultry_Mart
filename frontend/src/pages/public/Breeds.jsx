@@ -4,6 +4,12 @@ import { Feather, ShieldCheck } from 'lucide-react';
 
 const breedsData = [
   {
+    name: 'Peruvian',
+    origin: 'Peru & International Lineage',
+    desc: 'Heavyweight pure Peruvian Aseel breed. Extremely aggressive, high stamina, massive bone structure, and high breeding value.',
+    image: '/uploads/kathi_sandai_aseel.jpg',
+  },
+  {
     name: 'Peru Cross',
     origin: 'Andhra Pradesh & Tamil Nadu',
     desc: 'Heavyweight Peruvidai cross hybrid breed with thick muscular leg bone structure, high growth rate, and heavy breeding stock demand.',
@@ -38,12 +44,6 @@ const breedsData = [
     origin: 'Tamil Nadu & Andhra Pradesh',
     desc: 'Heavy breed native country rooster with long heavy legs, red comb, and massive body size ideal for farm stock breeding.',
     image: 'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
-  },
-  {
-    name: 'Siruvidai Naatu Kollu',
-    origin: 'South India',
-    desc: 'Traditional small breed country hen. Highly agile, natural brooder for hatching country eggs naturally.',
-    image: 'https://images.unsplash.com/photo-1563281577-a7be47e20db9?w=800',
   },
   {
     name: 'Kadaknath Naatu Kollu',
