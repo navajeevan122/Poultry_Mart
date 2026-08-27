@@ -4,6 +4,12 @@ import { Feather, ShieldCheck } from 'lucide-react';
 
 const breedsData = [
   {
+    name: 'Peru Cross',
+    origin: 'Andhra Pradesh & Tamil Nadu',
+    desc: 'Heavyweight Peruvidai cross hybrid breed with thick muscular leg bone structure, high growth rate, and heavy breeding stock demand.',
+    image: '/uploads/kathi_sandai_aseel.jpg',
+  },
+  {
     name: 'Gamefowl Aseel',
     origin: 'India & International Lineage',
     desc: 'High stamina international Gamefowl breed. Known for exceptional muscular vigor, heavy bone density, fierce standing posture, and breeding value.',

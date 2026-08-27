@@ -14,7 +14,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Lakshmi Naatu Kollu Farm',
-    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Gamefowl Aseel, Bhimavaram, Peruvidai, and Siruvidai country breeds raised naturally in farm fields.',
+    farmDescription: 'Specialized in 100% pure organic free-range Naatu Kollu (Natu Kodi), Peru Cross, Gamefowl Aseel, Bhimavaram, Peruvidai, and Siruvidai country breeds raised naturally in farm fields.',
     village: 'Tadepalligudem',
     mandal: 'Tadepalligudem',
     district: 'West Godavari',
@@ -30,7 +30,7 @@ const sampleSellers = [
     password: 'Password@123',
     role: 'seller',
     farmName: 'Sri Venkateswara Native Naatu Kollu Farm',
-    farmDescription: 'Authentic Gamefowl Aseel, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
+    farmDescription: 'Authentic Peru Cross, Gamefowl Aseel, Bhimavaram Aseel fighters, Kili Mookku Aseel Naatu Kollu roosters, and pure Country hens fed with natural grains.',
     village: 'Bhimavaram',
     mandal: 'Bhimavaram',
     district: 'West Godavari',
@@ -42,6 +42,38 @@ const sampleSellers = [
 ];
 
 const samplePoultryListings = (seller1Id, seller2Id) => [
+  {
+    sellerId: seller1Id,
+    name: 'Heavy Peru Cross Breeder Cock',
+    gender: 'Cock',
+    breed: 'Peru Cross',
+    age: 14,
+    ageUnit: 'Months',
+    weight: 4.2,
+    weightUnit: 'KG',
+    price: 8800,
+    quantity: 4,
+    village: 'Tadepalligudem',
+    mandal: 'Tadepalligudem',
+    district: 'West Godavari',
+    state: 'Andhra Pradesh',
+    pincode: '534101',
+    location: 'Tadepalligudem, West Godavari, Andhra Pradesh',
+    healthStatus: 'Healthy',
+    vaccinationStatus: 'Vaccinated',
+    vaccinationDetails: 'Dewormed & vaccinated. Heavy body weight & thick bone legs.',
+    description: 'High performance Peru Cross Rooster with massive body height, broad chest, and heavy breeding stock genetics.',
+    media: {
+      images: [
+        '/uploads/kathi_sandai_aseel.jpg',
+        'https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800',
+      ],
+      videos: ['https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'],
+    },
+    approvalStatus: 'approved',
+    isAvailable: true,
+    views: 780,
+  },
   {
     sellerId: seller2Id,
     name: 'Pure Gamefowl Aseel Fighter Cock',
@@ -353,10 +385,10 @@ const seedData = async () => {
     if (sellerIds.length >= 2) {
       const demoListings = samplePoultryListings(sellerIds[0], sellerIds[1]);
       await Poultry.insertMany(demoListings);
-      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Gamefowl Aseel into MongoDB Atlas!`);
+      console.log(`✅ Seeded ${demoListings.length} Naatu Kollu listings including Peru Cross into MongoDB Atlas!`);
     }
 
-    console.log('\n[MongoDB Atlas Seed Completed Successfully] Gamefowl & Naatu Kollu Marketplace ready!');
+    console.log('\n[MongoDB Atlas Seed Completed Successfully] Peru Cross, Gamefowl & Naatu Kollu Marketplace ready!');
     process.exit(0);
   } catch (error) {
     console.error(`====================================================`);
