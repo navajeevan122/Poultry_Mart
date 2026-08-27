@@ -5,8 +5,8 @@ import { ShieldCheck, Lock, Mail, ArrowRight } from 'lucide-react';
 
 const AdminLogin = () => {
   const { loginAdmin } = useContext(AuthContext);
-  const [email, setEmail] = useState('jeevan@poultrymart.com');
-  const [password, setPassword] = useState('Jeevan1234');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
 
@@ -42,7 +42,7 @@ const AdminLogin = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="jeevan@poultrymart.com"
+                placeholder="admin@poultrymart.com"
                 className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-2xl text-xs font-semibold text-slate-900 focus:ring-2 focus:ring-purple-500 focus:outline-none"
               />
             </div>
@@ -72,12 +72,6 @@ const AdminLogin = () => {
             <ArrowRight className="w-4 h-4" />
           </button>
         </form>
-
-        <div className="bg-purple-50 p-4 rounded-2xl border border-purple-100 text-xs text-purple-950 space-y-1">
-          <strong className="block font-bold">Admin Credentials (Updated):</strong>
-          <span className="block font-mono">Email: jeevan@poultrymart.com</span>
-          <span className="block font-mono">Password: Jeevan1234</span>
-        </div>
       </div>
     </div>
   );
