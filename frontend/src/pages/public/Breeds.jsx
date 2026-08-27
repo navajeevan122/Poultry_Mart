@@ -4,6 +4,12 @@ import { Feather, ShieldCheck } from 'lucide-react';
 
 const breedsData = [
   {
+    name: 'Gamefowl Aseel',
+    origin: 'India & International Lineage',
+    desc: 'High stamina international Gamefowl breed. Known for exceptional muscular vigor, heavy bone density, fierce standing posture, and breeding value.',
+    image: '/uploads/kathi_sandai_aseel.jpg',
+  },
+  {
     name: 'Bhimavaram Aseel',
     origin: 'Bhimavaram, West Godavari, AP',
     desc: 'World famous Andhra Aseel breed from Bhimavaram region. Renowned for its tall standing posture, broad chest, immense stamina, and muscular build.',

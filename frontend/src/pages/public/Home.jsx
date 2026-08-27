@@ -7,13 +7,13 @@ import { Search, Phone, ShieldCheck, CheckCircle, ArrowRight, UserPlus, Sparkles
 
 const popularBreedsList = [
   { name: 'Pure Naatu Kollu', desc: 'Organic Country Hen / Natu Kodi', icon: '🌾', badge: '100% Organic' },
+  { name: 'Gamefowl Aseel', desc: 'High Game Breed & Muscular Stamina', icon: '👑', badge: 'Gamefowl Line' },
   { name: 'Bhimavaram Aseel', desc: 'Famous West Godavari Breeder & Fighter', icon: '🔥', badge: 'Bhimavaram Spec' },
   { name: 'Peruvidai Naatu Kollu', desc: 'Heavy Breed Country Rooster', icon: '🐓', badge: 'Heavy Size' },
   { name: 'Kili Mookku Aseel', desc: 'Parrot Beak Native Rooster', icon: '🦜', badge: 'Champion Line' },
   { name: 'Siruvidai Naatu Kollu', desc: 'Small Breed Native Brooding Hen', icon: '🥚', badge: 'Brooding Spec' },
   { name: 'Kathi Sandai Aseel', desc: 'High Stamina Fighter Rooster', icon: '⚔️', badge: 'Stamina Fighter' },
   { name: 'Kadaknath Naatu Kollu', desc: 'Medicinal Black Meat Native Bird', icon: '🖤', badge: 'Black Meat' },
-  { name: 'Free Range Chicks', desc: '2-Month Native Organic Chicks', icon: '🐥', badge: 'Farm Chicks' },
 ];
 
 const Home = () => {
@@ -66,7 +66,7 @@ const Home = () => {
               </h1>
 
               <p className="text-lg text-emerald-100/90 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Find organic free-range Naatu Kollu (Natu Kodi), Bhimavaram Aseel, Peruvidai, Siruvidai, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
+                Find organic free-range Naatu Kollu (Natu Kodi), Gamefowl Aseel, Bhimavaram, Peruvidai, Siruvidai, and Kili Mookku country hens and roosters directly from local farmers. Zero middleman fees!
               </p>
 
               {/* Integrated Hero Search Bar */}
@@ -77,7 +77,7 @@ const Home = () => {
                     type="text"
                     value={heroSearch}
                     onChange={(e) => setHeroSearch(e.target.value)}
-                    placeholder="Search Bhimavaram Aseel, Naatu Kollu, West Godavari..."
+                    placeholder="Search Gamefowl Aseel, Bhimavaram, Naatu Kollu, West Godavari..."
                     className="w-full pl-12 pr-36 py-3 bg-transparent text-slate-900 placeholder-slate-400 text-sm font-semibold focus:outline-none"
                   />
                   <button
@@ -136,10 +136,10 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent flex items-end p-6">
                     <div className="text-white space-y-1">
                       <span className="bg-emerald-600 text-white text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                        Bhimavaram & Native Breeds
+                        Gamefowl & Native Breeds
                       </span>
                       <h3 className="text-xl font-black">Organic Free Range Naatu Kollu</h3>
-                      <p className="text-xs text-emerald-200">Bhimavaram, West Godavari & Visakhapatnam</p>
+                      <p className="text-xs text-emerald-200">Gamefowl, Bhimavaram, West Godavari & Visakhapatnam</p>
                     </div>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ const Home = () => {
               Featured <span className="text-emerald-600">Naatu Kollu Listings</span>
             </h2>
             <p className="text-sm text-slate-500 mt-1">
-              Recently approved Bhimavaram Aseel roosters, organic country hens, and native breeding stock.
+              Recently approved Gamefowl Aseel, Bhimavaram roosters, organic country hens, and native breeding stock.
             </p>
           </div>
           <Link
