@@ -9,7 +9,7 @@ Customers (public visitors) do **NOT** require an account, login, or checkout. T
 
 ## 🔑 Admin Credentials
 
-- **Email:** `********`
+- **Email:** `*******`
 - **Password:** `********`
 - **Role:** `admin`
 
